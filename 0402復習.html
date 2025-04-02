@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0402復習</title>
+</head>
+<body>
+    <!-- 1番の回答
+     styleを直接htmlに書いて変更する
+     pタグの色をcssの別クラスで記述する
+     JavaScriptによって、何かのイベントによって変更する -->
+
+     <!-- 2番の回答 -->
+    <p class = "higjlight">二番の問題</p>
+
+    <button id="changeColor">色を変える</button>
+
+    <h1 id="title">JavaScriptの復習</h1>
+
+    <ul class = "markup">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <div id="container"></div>
+
+    <!-- 7番の問題 
+     divタグで表す。
+     divを親とした場合、その中に書かれた複数要素全てを子要素と呼ぶ
+     その子要素同士を兄弟として扱う-->
+
+    <!-- 8番の問題 -->
+     <div id="parent">
+        <p id="child">子要素</p>
+    </div>
+
+    <!-- 9番の問題 -->
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+    <script>
+        // 3番の問題
+        var changeColor = document.getElementById("changeColor")
+        {
+            changeColor.style.color = "red";
+        }
+
+        // 4番の問題
+        var getConsole = document.getElementById("title")
+        {
+            console.log(getConsole);
+        }
+
+        // 5番の問題
+        var allTag = document.querySelector(".markup")
+        var listItems = allTag.children;
+        {
+            for(var i = 0; i <listItems.length; i++)
+            {
+                console.log(listItems[i].textContent);
+            }
+        }
+
+        // 6番の問題
+        var pairlentContainer = document.getElementById("conatainer")
+        var newContent = document.createElement("p");
+        newContent.textContent = "追加要素";
+        pairlentContainer.appendChild(newContent);
+
+        // 8番の問題
+        var childNode = document.getElementById("child");
+        var pairlentNode = childNode.parentNode;
+        console.log(pairelentNode);
+
+        // 9番の問題
+        var getUl = document.getElementById("list");
+        var getlist = getUl.children;
+        var firstList = getlist[0];
+
+    </script>
+
+</body>
+</html>
