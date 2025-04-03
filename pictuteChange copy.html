@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>format</title>
+</head>
+<body>
+    <img id = "apple" src="pic/apple.png" alt="">
+    <img id = "orange" src="pic/orange.png" alt="">
+    <p>このテキストは動かないはず...</p>
+    <style>
+        #orange {
+            opacity: 0;
+        }
+        #orange.active {
+            opacity: 1;
+        }
+    </style>
+    
+    <script>
+        let apple = document.getElementById("apple");
+        let orange = document.getElementById("orange");
+        apple.onclick = function(){
+            apple.remove();
+            orange.classList.toggle("active");
+        } 
+    </script>
+
+</body>
+</html>
