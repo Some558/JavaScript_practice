@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onMouseColorChange</title>
+</head>
+<body>
+    <p id = "text">このテキストの色を変えます</p>
+    
+    <style>
+        #text {
+            color: black; 
+        }
+
+        #text.active{
+            color: red;
+        }
+
+    </style>
+    
+    <script>
+        let textChange = document.getElementById("text");
+        textChange.onmouseover = function(){
+            textChange.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
